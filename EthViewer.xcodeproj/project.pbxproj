@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FC6446B200C1D1D00EF74B6 /* BalanceViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6446A200C1D1D00EF74B6 /* BalanceViewSpec.swift */; };
+		4FC6446E200C1D4100EF74B6 /* MainScreenViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6446D200C1D4100EF74B6 /* MainScreenViewControllerSpec.swift */; };
+		4FC64470200C1D6600EF74B6 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6446F200C1D6600EF74B6 /* AppDelegateSpec.swift */; };
+		4FC64474200C1DB100EF74B6 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC64472200C1DB000EF74B6 /* Quick.framework */; };
+		4FC64475200C1DB100EF74B6 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC64473200C1DB100EF74B6 /* Nimble.framework */; };
 		4FFB65AF200BE24C00783BC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB65AE200BE24C00783BC4 /* AppDelegate.swift */; };
-		4FFB65B1200BE24C00783BC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB65B0200BE24C00783BC4 /* ViewController.swift */; };
-		4FFB65B4200BE24C00783BC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FFB65B2200BE24C00783BC4 /* Main.storyboard */; };
 		4FFB65B6200BE24C00783BC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFB65B5200BE24C00783BC4 /* Assets.xcassets */; };
 		4FFB65B9200BE24C00783BC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FFB65B7200BE24C00783BC4 /* LaunchScreen.storyboard */; };
-		4FFB65C4200BE24C00783BC4 /* EthViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB65C3200BE24C00783BC4 /* EthViewerTests.swift */; };
 		4FFB65CF200BE24C00783BC4 /* EthViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB65CE200BE24C00783BC4 /* EthViewerUITests.swift */; };
+		4FFB65E1200BE5B200783BC4 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB65E0200BE5B200783BC4 /* MainScreenViewController.swift */; };
+		4FFB65E4200BE6B300783BC4 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB65E3200BE6B300783BC4 /* BalanceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +38,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4FC6446A200C1D1D00EF74B6 /* BalanceViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewSpec.swift; sourceTree = "<group>"; };
+		4FC6446D200C1D4100EF74B6 /* MainScreenViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewControllerSpec.swift; sourceTree = "<group>"; };
+		4FC6446F200C1D6600EF74B6 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
+		4FC64472200C1DB000EF74B6 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		4FC64473200C1DB100EF74B6 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		4FFB65AB200BE24C00783BC4 /* EthViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFB65AE200BE24C00783BC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4FFB65B0200BE24C00783BC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4FFB65B3200BE24C00783BC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FFB65B5200BE24C00783BC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FFB65B8200BE24C00783BC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FFB65BA200BE24C00783BC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FFB65BF200BE24C00783BC4 /* EthViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FFB65C3200BE24C00783BC4 /* EthViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthViewerTests.swift; sourceTree = "<group>"; };
 		4FFB65C5200BE24C00783BC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FFB65CA200BE24C00783BC4 /* EthViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EthViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFB65CE200BE24C00783BC4 /* EthViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthViewerUITests.swift; sourceTree = "<group>"; };
 		4FFB65D0200BE24C00783BC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FFB65E0200BE5B200783BC4 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		4FFB65E3200BE6B300783BC4 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FC64474200C1DB100EF74B6 /* Quick.framework in Frameworks */,
+				4FC64475200C1DB100EF74B6 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +84,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FC64469200C1D1200EF74B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FC6446A200C1D1D00EF74B6 /* BalanceViewSpec.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4FC6446C200C1D3300EF74B6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4FC6446D200C1D4100EF74B6 /* MainScreenViewControllerSpec.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4FC64471200C1D8C00EF74B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FC64473200C1DB100EF74B6 /* Nimble.framework */,
+				4FC64472200C1DB000EF74B6 /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4FFB65A2200BE24C00783BC4 = {
 			isa = PBXGroup;
 			children = (
 				4FFB65AD200BE24C00783BC4 /* EthViewer */,
 				4FFB65C2200BE24C00783BC4 /* EthViewerTests */,
 				4FFB65CD200BE24C00783BC4 /* EthViewerUITests */,
+				4FC64471200C1D8C00EF74B6 /* Frameworks */,
 				4FFB65AC200BE24C00783BC4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,9 +133,12 @@
 		4FFB65AD200BE24C00783BC4 /* EthViewer */ = {
 			isa = PBXGroup;
 			children = (
+				4FFB65DC200BE26000783BC4 /* Controllers */,
+				4FFB65DD200BE26700783BC4 /* Models */,
+				4FFB65DF200BE27200783BC4 /* Networking */,
+				4FFB65DE200BE26D00783BC4 /* Requests */,
+				4FFB65E2200BE68400783BC4 /* Views */,
 				4FFB65AE200BE24C00783BC4 /* AppDelegate.swift */,
-				4FFB65B0200BE24C00783BC4 /* ViewController.swift */,
-				4FFB65B2200BE24C00783BC4 /* Main.storyboard */,
 				4FFB65B5200BE24C00783BC4 /* Assets.xcassets */,
 				4FFB65B7200BE24C00783BC4 /* LaunchScreen.storyboard */,
 				4FFB65BA200BE24C00783BC4 /* Info.plist */,
@@ -110,7 +149,9 @@
 		4FFB65C2200BE24C00783BC4 /* EthViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				4FFB65C3200BE24C00783BC4 /* EthViewerTests.swift */,
+				4FC6446C200C1D3300EF74B6 /* Controllers */,
+				4FC64469200C1D1200EF74B6 /* Views */,
+				4FC6446F200C1D6600EF74B6 /* AppDelegateSpec.swift */,
 				4FFB65C5200BE24C00783BC4 /* Info.plist */,
 			);
 			path = EthViewerTests;
@@ -123,6 +164,43 @@
 				4FFB65D0200BE24C00783BC4 /* Info.plist */,
 			);
 			path = EthViewerUITests;
+			sourceTree = "<group>";
+		};
+		4FFB65DC200BE26000783BC4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4FFB65E0200BE5B200783BC4 /* MainScreenViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4FFB65DD200BE26700783BC4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4FFB65DE200BE26D00783BC4 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		4FFB65DF200BE27200783BC4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4FFB65E2200BE68400783BC4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FFB65E3200BE6B300783BC4 /* BalanceView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +312,6 @@
 			files = (
 				4FFB65B9200BE24C00783BC4 /* LaunchScreen.storyboard in Resources */,
 				4FFB65B6200BE24C00783BC4 /* Assets.xcassets in Resources */,
-				4FFB65B4200BE24C00783BC4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +336,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FFB65B1200BE24C00783BC4 /* ViewController.swift in Sources */,
+				4FFB65E4200BE6B300783BC4 /* BalanceView.swift in Sources */,
 				4FFB65AF200BE24C00783BC4 /* AppDelegate.swift in Sources */,
+				4FFB65E1200BE5B200783BC4 /* MainScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +346,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FFB65C4200BE24C00783BC4 /* EthViewerTests.swift in Sources */,
+				4FC6446E200C1D4100EF74B6 /* MainScreenViewControllerSpec.swift in Sources */,
+				4FC6446B200C1D1D00EF74B6 /* BalanceViewSpec.swift in Sources */,
+				4FC64470200C1D6600EF74B6 /* AppDelegateSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +376,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4FFB65B2200BE24C00783BC4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4FFB65B3200BE24C00783BC4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4FFB65B7200BE24C00783BC4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -429,7 +501,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S4N3E7VRA;
 				INFOPLIST_FILE = EthViewer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliottminns.EthViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -444,7 +516,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S4N3E7VRA;
 				INFOPLIST_FILE = EthViewer/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliottminns.EthViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -459,6 +531,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S4N3E7VRA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EthViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliottminns.EthViewerTests;
@@ -476,6 +552,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8S4N3E7VRA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EthViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliottminns.EthViewerTests;
