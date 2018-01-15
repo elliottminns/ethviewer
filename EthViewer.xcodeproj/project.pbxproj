@@ -12,6 +12,24 @@
 		4FC64470200C1D6600EF74B6 /* AppDelegateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6446F200C1D6600EF74B6 /* AppDelegateSpec.swift */; };
 		4FC64474200C1DB100EF74B6 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC64472200C1DB000EF74B6 /* Quick.framework */; };
 		4FC64475200C1DB100EF74B6 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC64473200C1DB100EF74B6 /* Nimble.framework */; };
+		4FC6447C200CCA9000EF74B6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64476200CCA8F00EF74B6 /* Result.swift */; };
+		4FC6447D200CCA9000EF74B6 /* ResultParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64477200CCA8F00EF74B6 /* ResultParsing.swift */; };
+		4FC6447E200CCA9000EF74B6 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64478200CCA8F00EF74B6 /* Requester.swift */; };
+		4FC6447F200CCA9000EF74B6 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64479200CCA8F00EF74B6 /* Client.swift */; };
+		4FC64480200CCA9000EF74B6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6447A200CCA8F00EF74B6 /* Request.swift */; };
+		4FC64481200CCA9000EF74B6 /* MultipartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6447B200CCA8F00EF74B6 /* MultipartRequest.swift */; };
+		4FC64483200CCE7300EF74B6 /* EtherscanRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64482200CCE7300EF74B6 /* EtherscanRequest.swift */; };
+		4FC64487200CD04F00EF74B6 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64485200CD04F00EF74B6 /* Configuration.swift */; };
+		4FC64488200CD04F00EF74B6 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FC64486200CD04F00EF74B6 /* Configurations.plist */; };
+		4FC6448A200CD0FD00EF74B6 /* AccountBalanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64489200CD0FD00EF74B6 /* AccountBalanceRequest.swift */; };
+		4FC6448C200CEBEE00EF74B6 /* TokenBalanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6448B200CEBEE00EF74B6 /* TokenBalanceRequest.swift */; };
+		4FC6448E200CEEBF00EF74B6 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6448D200CEEBF00EF74B6 /* Token.swift */; };
+		4FC64491200CFB8A00EF74B6 /* BalanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64490200CFB8A00EF74B6 /* BalanceService.swift */; };
+		4FC64493200CFF5A00EF74B6 /* ShapeShiftRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64492200CFF5A00EF74B6 /* ShapeShiftRequest.swift */; };
+		4FC64495200CFFB300EF74B6 /* EthConversionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64494200CFFB300EF74B6 /* EthConversionRequest.swift */; };
+		4FC64497200D03A800EF74B6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64496200D03A800EF74B6 /* Service.swift */; };
+		4FC64499200D0F8600EF74B6 /* Balances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64498200D0F8600EF74B6 /* Balances.swift */; };
+		4FC6449C200D187600EF74B6 /* EtherscanRequestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6449B200D187600EF74B6 /* EtherscanRequestSpec.swift */; };
 		4FFB65AF200BE24C00783BC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB65AE200BE24C00783BC4 /* AppDelegate.swift */; };
 		4FFB65B6200BE24C00783BC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFB65B5200BE24C00783BC4 /* Assets.xcassets */; };
 		4FFB65B9200BE24C00783BC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FFB65B7200BE24C00783BC4 /* LaunchScreen.storyboard */; };
@@ -43,6 +61,24 @@
 		4FC6446F200C1D6600EF74B6 /* AppDelegateSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateSpec.swift; sourceTree = "<group>"; };
 		4FC64472200C1DB000EF74B6 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		4FC64473200C1DB100EF74B6 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		4FC64476200CCA8F00EF74B6 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		4FC64477200CCA8F00EF74B6 /* ResultParsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultParsing.swift; sourceTree = "<group>"; };
+		4FC64478200CCA8F00EF74B6 /* Requester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
+		4FC64479200CCA8F00EF74B6 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		4FC6447A200CCA8F00EF74B6 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		4FC6447B200CCA8F00EF74B6 /* MultipartRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartRequest.swift; sourceTree = "<group>"; };
+		4FC64482200CCE7300EF74B6 /* EtherscanRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtherscanRequest.swift; sourceTree = "<group>"; };
+		4FC64485200CD04F00EF74B6 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		4FC64486200CD04F00EF74B6 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
+		4FC64489200CD0FD00EF74B6 /* AccountBalanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceRequest.swift; sourceTree = "<group>"; };
+		4FC6448B200CEBEE00EF74B6 /* TokenBalanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenBalanceRequest.swift; sourceTree = "<group>"; };
+		4FC6448D200CEEBF00EF74B6 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		4FC64490200CFB8A00EF74B6 /* BalanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceService.swift; sourceTree = "<group>"; };
+		4FC64492200CFF5A00EF74B6 /* ShapeShiftRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeShiftRequest.swift; sourceTree = "<group>"; };
+		4FC64494200CFFB300EF74B6 /* EthConversionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthConversionRequest.swift; sourceTree = "<group>"; };
+		4FC64496200D03A800EF74B6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		4FC64498200D0F8600EF74B6 /* Balances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balances.swift; sourceTree = "<group>"; };
+		4FC6449B200D187600EF74B6 /* EtherscanRequestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtherscanRequestSpec.swift; sourceTree = "<group>"; };
 		4FFB65AB200BE24C00783BC4 /* EthViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFB65AE200BE24C00783BC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FFB65B5200BE24C00783BC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +145,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4FC64484200CD01E00EF74B6 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4FC64485200CD04F00EF74B6 /* Configuration.swift */,
+				4FC64486200CD04F00EF74B6 /* Configurations.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		4FC6448F200CFB6500EF74B6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4FC64490200CFB8A00EF74B6 /* BalanceService.swift */,
+				4FC64496200D03A800EF74B6 /* Service.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4FC6449A200D186200EF74B6 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				4FC6449B200D187600EF74B6 /* EtherscanRequestSpec.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
 		4FFB65A2200BE24C00783BC4 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +195,8 @@
 		4FFB65AD200BE24C00783BC4 /* EthViewer */ = {
 			isa = PBXGroup;
 			children = (
+				4FC6448F200CFB6500EF74B6 /* Services */,
+				4FC64484200CD01E00EF74B6 /* Configuration */,
 				4FFB65DC200BE26000783BC4 /* Controllers */,
 				4FFB65DD200BE26700783BC4 /* Models */,
 				4FFB65DF200BE27200783BC4 /* Networking */,
@@ -149,6 +213,7 @@
 		4FFB65C2200BE24C00783BC4 /* EthViewerTests */ = {
 			isa = PBXGroup;
 			children = (
+				4FC6449A200D186200EF74B6 /* Requests */,
 				4FC6446C200C1D3300EF74B6 /* Controllers */,
 				4FC64469200C1D1200EF74B6 /* Views */,
 				4FC6446F200C1D6600EF74B6 /* AppDelegateSpec.swift */,
@@ -177,6 +242,8 @@
 		4FFB65DD200BE26700783BC4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4FC6448D200CEEBF00EF74B6 /* Token.swift */,
+				4FC64498200D0F8600EF74B6 /* Balances.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,6 +251,11 @@
 		4FFB65DE200BE26D00783BC4 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				4FC64482200CCE7300EF74B6 /* EtherscanRequest.swift */,
+				4FC64489200CD0FD00EF74B6 /* AccountBalanceRequest.swift */,
+				4FC6448B200CEBEE00EF74B6 /* TokenBalanceRequest.swift */,
+				4FC64492200CFF5A00EF74B6 /* ShapeShiftRequest.swift */,
+				4FC64494200CFFB300EF74B6 /* EthConversionRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -191,6 +263,12 @@
 		4FFB65DF200BE27200783BC4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				4FC64479200CCA8F00EF74B6 /* Client.swift */,
+				4FC6447B200CCA8F00EF74B6 /* MultipartRequest.swift */,
+				4FC6447A200CCA8F00EF74B6 /* Request.swift */,
+				4FC64478200CCA8F00EF74B6 /* Requester.swift */,
+				4FC64476200CCA8F00EF74B6 /* Result.swift */,
+				4FC64477200CCA8F00EF74B6 /* ResultParsing.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -311,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FFB65B9200BE24C00783BC4 /* LaunchScreen.storyboard in Resources */,
+				4FC64488200CD04F00EF74B6 /* Configurations.plist in Resources */,
 				4FFB65B6200BE24C00783BC4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,9 +415,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FC6447D200CCA9000EF74B6 /* ResultParsing.swift in Sources */,
+				4FC64480200CCA9000EF74B6 /* Request.swift in Sources */,
+				4FC6447F200CCA9000EF74B6 /* Client.swift in Sources */,
 				4FFB65E4200BE6B300783BC4 /* BalanceView.swift in Sources */,
+				4FC6447E200CCA9000EF74B6 /* Requester.swift in Sources */,
+				4FC64497200D03A800EF74B6 /* Service.swift in Sources */,
+				4FC64481200CCA9000EF74B6 /* MultipartRequest.swift in Sources */,
+				4FC6448A200CD0FD00EF74B6 /* AccountBalanceRequest.swift in Sources */,
+				4FC64495200CFFB300EF74B6 /* EthConversionRequest.swift in Sources */,
 				4FFB65AF200BE24C00783BC4 /* AppDelegate.swift in Sources */,
+				4FC6447C200CCA9000EF74B6 /* Result.swift in Sources */,
 				4FFB65E1200BE5B200783BC4 /* MainScreenViewController.swift in Sources */,
+				4FC64493200CFF5A00EF74B6 /* ShapeShiftRequest.swift in Sources */,
+				4FC6448C200CEBEE00EF74B6 /* TokenBalanceRequest.swift in Sources */,
+				4FC64483200CCE7300EF74B6 /* EtherscanRequest.swift in Sources */,
+				4FC64487200CD04F00EF74B6 /* Configuration.swift in Sources */,
+				4FC6448E200CEEBF00EF74B6 /* Token.swift in Sources */,
+				4FC64499200D0F8600EF74B6 /* Balances.swift in Sources */,
+				4FC64491200CFB8A00EF74B6 /* BalanceService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +443,7 @@
 			files = (
 				4FC6446E200C1D4100EF74B6 /* MainScreenViewControllerSpec.swift in Sources */,
 				4FC6446B200C1D1D00EF74B6 /* BalanceViewSpec.swift in Sources */,
+				4FC6449C200D187600EF74B6 /* EtherscanRequestSpec.swift in Sources */,
 				4FC64470200C1D6600EF74B6 /* AppDelegateSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

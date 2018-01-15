@@ -75,6 +75,65 @@ class MainScreenViewControllerSpec: QuickSpec {
           expect(controller.viewMoreButton.title(for: .normal)) == "view more"
         }
       }
+      
+      describe("Updating the balance") {
+        class ServiceMock: Gettable {
+          typealias ResultType = AccountBalance
+          
+          var getCalled = false
+          
+          var result: Result<ResultType>?
+          
+          init(result: Result<ResultType>?) {
+            self.result = result
+          }
+          
+          func get(callback: @escaping (Result<AccountBalance>) -> Void) {
+            getCalled = true
+            guard let result = result else { return }
+            callback(result)
+          }
+        }
+        
+        var service: ServiceMock!
+        
+        context("with a hanging service") {
+          beforeEach {
+            service = ServiceMock(result: nil)
+            controller.updateBalances(with: service)
+          }
+          
+          it("should disable the refresh button") {
+            expect(controller.refreshButton?.isEnabled) == false
+          }
+        }
+        
+        context("with a successful service") {
+          beforeEach {
+            let balance = AccountBalance(address: "", account: 5.0,
+                                         tokens: [Token.gnt: 1],
+                                         rates: [Token.gnt: 10])
+            service = ServiceMock(result: .success(balance))
+            controller.updateBalances(with: service)
+          }
+          
+          it("should set the account balance correctly") {
+            expect(controller.accountBalanceView.balance) == "5.00000"
+          }
+          
+          it("should set the token balance correctly") {
+            expect(controller.tokenBalanceView.balance) == "10.00000"
+          }
+          
+          it("should call the service") {
+            expect(service.getCalled) == true
+          }
+          
+          it("should set the refresh button to enabled") {
+            expect(controller.refreshButton?.isEnabled) == true
+          }
+        }
+      }
     }
   }
 }
