@@ -27,10 +27,8 @@ class SessionClient: RequestClient {
   }
   
   func perform(request: URLRequest, callback: @escaping ClientCallback) {
-    UIApplication.shared.isNetworkActivityIndicatorVisible = true
     let task = session.dataTask(with: request) { data, res, err in
       DispatchQueue.main.async {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
         callback(data, res, err)
       }
     }

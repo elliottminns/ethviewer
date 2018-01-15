@@ -30,6 +30,9 @@
 		4FC64497200D03A800EF74B6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64496200D03A800EF74B6 /* Service.swift */; };
 		4FC64499200D0F8600EF74B6 /* Balances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC64498200D0F8600EF74B6 /* Balances.swift */; };
 		4FC6449C200D187600EF74B6 /* EtherscanRequestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6449B200D187600EF74B6 /* EtherscanRequestSpec.swift */; };
+		4FC6449E200D21E900EF74B6 /* TokenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6449D200D21E900EF74B6 /* TokenTableViewController.swift */; };
+		4FC644A0200D3A4800EF74B6 /* TokenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6449F200D3A4800EF74B6 /* TokenTableViewCell.swift */; };
+		4FC644A3200D477400EF74B6 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC644A2200D477400EF74B6 /* ReusableCell.swift */; };
 		4FFB65AF200BE24C00783BC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB65AE200BE24C00783BC4 /* AppDelegate.swift */; };
 		4FFB65B6200BE24C00783BC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFB65B5200BE24C00783BC4 /* Assets.xcassets */; };
 		4FFB65B9200BE24C00783BC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FFB65B7200BE24C00783BC4 /* LaunchScreen.storyboard */; };
@@ -79,6 +82,9 @@
 		4FC64496200D03A800EF74B6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4FC64498200D0F8600EF74B6 /* Balances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balances.swift; sourceTree = "<group>"; };
 		4FC6449B200D187600EF74B6 /* EtherscanRequestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtherscanRequestSpec.swift; sourceTree = "<group>"; };
+		4FC6449D200D21E900EF74B6 /* TokenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTableViewController.swift; sourceTree = "<group>"; };
+		4FC6449F200D3A4800EF74B6 /* TokenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTableViewCell.swift; sourceTree = "<group>"; };
+		4FC644A2200D477400EF74B6 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		4FFB65AB200BE24C00783BC4 /* EthViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFB65AE200BE24C00783BC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FFB65B5200BE24C00783BC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -171,6 +177,14 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		4FC644A1200D46F400EF74B6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4FC644A2200D477400EF74B6 /* ReusableCell.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		4FFB65A2200BE24C00783BC4 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +209,7 @@
 		4FFB65AD200BE24C00783BC4 /* EthViewer */ = {
 			isa = PBXGroup;
 			children = (
+				4FC644A1200D46F400EF74B6 /* Protocols */,
 				4FC6448F200CFB6500EF74B6 /* Services */,
 				4FC64484200CD01E00EF74B6 /* Configuration */,
 				4FFB65DC200BE26000783BC4 /* Controllers */,
@@ -235,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				4FFB65E0200BE5B200783BC4 /* MainScreenViewController.swift */,
+				4FC6449D200D21E900EF74B6 /* TokenTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -277,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				4FFB65E3200BE6B300783BC4 /* BalanceView.swift */,
+				4FC6449F200D3A4800EF74B6 /* TokenTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -419,15 +436,18 @@
 				4FC64480200CCA9000EF74B6 /* Request.swift in Sources */,
 				4FC6447F200CCA9000EF74B6 /* Client.swift in Sources */,
 				4FFB65E4200BE6B300783BC4 /* BalanceView.swift in Sources */,
+				4FC644A3200D477400EF74B6 /* ReusableCell.swift in Sources */,
 				4FC6447E200CCA9000EF74B6 /* Requester.swift in Sources */,
 				4FC64497200D03A800EF74B6 /* Service.swift in Sources */,
 				4FC64481200CCA9000EF74B6 /* MultipartRequest.swift in Sources */,
 				4FC6448A200CD0FD00EF74B6 /* AccountBalanceRequest.swift in Sources */,
 				4FC64495200CFFB300EF74B6 /* EthConversionRequest.swift in Sources */,
 				4FFB65AF200BE24C00783BC4 /* AppDelegate.swift in Sources */,
+				4FC644A0200D3A4800EF74B6 /* TokenTableViewCell.swift in Sources */,
 				4FC6447C200CCA9000EF74B6 /* Result.swift in Sources */,
 				4FFB65E1200BE5B200783BC4 /* MainScreenViewController.swift in Sources */,
 				4FC64493200CFF5A00EF74B6 /* ShapeShiftRequest.swift in Sources */,
+				4FC6449E200D21E900EF74B6 /* TokenTableViewController.swift in Sources */,
 				4FC6448C200CEBEE00EF74B6 /* TokenBalanceRequest.swift in Sources */,
 				4FC64483200CCE7300EF74B6 /* EtherscanRequest.swift in Sources */,
 				4FC64487200CD04F00EF74B6 /* Configuration.swift in Sources */,

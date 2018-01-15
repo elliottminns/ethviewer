@@ -8,13 +8,17 @@
 
 import Foundation
 
-enum Token {
+enum Token: String {
   case gnt
   case omg
   case rep
 }
 
 extension Token {
+  
+  var ticker: String {
+    return self.rawValue.uppercased()
+  }
   
   var name: String {
     switch self {

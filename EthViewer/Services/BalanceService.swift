@@ -6,7 +6,7 @@
 //  Copyright © 2018 Elliott Minns. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct BalanceService: Gettable {
   
@@ -22,6 +22,7 @@ struct BalanceService: Gettable {
   }
   
   func get(callback: @escaping (Result<AccountBalance>) -> Void) {
+    UIApplication.shared.isNetworkActivityIndicatorVisible = true
     
     var accountBalance: Double?
     var tokenBalances: [Token: Double] = [:]
@@ -65,6 +66,7 @@ struct BalanceService: Gettable {
       let balance = AccountBalance(address: self.address, account: account,
                                    tokens: tokenBalances, rates: rates)
 
+      UIApplication.shared.isNetworkActivityIndicatorVisible = false
       callback(.success(balance))
     }
     group.leave()
