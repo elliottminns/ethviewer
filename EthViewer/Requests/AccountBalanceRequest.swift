@@ -12,7 +12,6 @@ struct AccountBalanceRequest: EtherscanBalanceRequest {
   
   typealias ParsedType = Double
   
-
   let action: EtherscanAction = .balance
   
   let address: String

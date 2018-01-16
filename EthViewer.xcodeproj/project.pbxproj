@@ -33,6 +33,9 @@
 		4FC6449E200D21E900EF74B6 /* TokenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6449D200D21E900EF74B6 /* TokenTableViewController.swift */; };
 		4FC644A0200D3A4800EF74B6 /* TokenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC6449F200D3A4800EF74B6 /* TokenTableViewCell.swift */; };
 		4FC644A3200D477400EF74B6 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC644A2200D477400EF74B6 /* ReusableCell.swift */; };
+		4FD49420200E19690045EBFF /* AccountBalanceRequestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD4941F200E19690045EBFF /* AccountBalanceRequestSpec.swift */; };
+		4FD49422200E1AF50045EBFF /* TokenBalanceRequestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD49421200E1AF50045EBFF /* TokenBalanceRequestSpec.swift */; };
+		4FD49425200E1B6A0045EBFF /* TokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD49424200E1B6A0045EBFF /* TokenSpec.swift */; };
 		4FFB65AF200BE24C00783BC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB65AE200BE24C00783BC4 /* AppDelegate.swift */; };
 		4FFB65B6200BE24C00783BC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFB65B5200BE24C00783BC4 /* Assets.xcassets */; };
 		4FFB65B9200BE24C00783BC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FFB65B7200BE24C00783BC4 /* LaunchScreen.storyboard */; };
@@ -85,6 +88,9 @@
 		4FC6449D200D21E900EF74B6 /* TokenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTableViewController.swift; sourceTree = "<group>"; };
 		4FC6449F200D3A4800EF74B6 /* TokenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTableViewCell.swift; sourceTree = "<group>"; };
 		4FC644A2200D477400EF74B6 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		4FD4941F200E19690045EBFF /* AccountBalanceRequestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceRequestSpec.swift; sourceTree = "<group>"; };
+		4FD49421200E1AF50045EBFF /* TokenBalanceRequestSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenBalanceRequestSpec.swift; sourceTree = "<group>"; };
+		4FD49424200E1B6A0045EBFF /* TokenSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenSpec.swift; sourceTree = "<group>"; };
 		4FFB65AB200BE24C00783BC4 /* EthViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFB65AE200BE24C00783BC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FFB65B5200BE24C00783BC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,6 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				4FC6449B200D187600EF74B6 /* EtherscanRequestSpec.swift */,
+				4FD4941F200E19690045EBFF /* AccountBalanceRequestSpec.swift */,
+				4FD49421200E1AF50045EBFF /* TokenBalanceRequestSpec.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -183,6 +191,14 @@
 				4FC644A2200D477400EF74B6 /* ReusableCell.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4FD49423200E1B440045EBFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4FD49424200E1B6A0045EBFF /* TokenSpec.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4FFB65A2200BE24C00783BC4 = {
@@ -228,6 +244,7 @@
 		4FFB65C2200BE24C00783BC4 /* EthViewerTests */ = {
 			isa = PBXGroup;
 			children = (
+				4FD49423200E1B440045EBFF /* Models */,
 				4FC6449A200D186200EF74B6 /* Requests */,
 				4FC6446C200C1D3300EF74B6 /* Controllers */,
 				4FC64469200C1D1200EF74B6 /* Views */,
@@ -464,7 +481,10 @@
 				4FC6446E200C1D4100EF74B6 /* MainScreenViewControllerSpec.swift in Sources */,
 				4FC6446B200C1D1D00EF74B6 /* BalanceViewSpec.swift in Sources */,
 				4FC6449C200D187600EF74B6 /* EtherscanRequestSpec.swift in Sources */,
+				4FD49420200E19690045EBFF /* AccountBalanceRequestSpec.swift in Sources */,
+				4FD49422200E1AF50045EBFF /* TokenBalanceRequestSpec.swift in Sources */,
 				4FC64470200C1D6600EF74B6 /* AppDelegateSpec.swift in Sources */,
+				4FD49425200E1B6A0045EBFF /* TokenSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

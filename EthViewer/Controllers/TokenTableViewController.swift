@@ -21,8 +21,9 @@ class TokenTableViewController: UITableViewController {
     self.amounts = amounts
     self.rates = rates
     super.init(nibName: nil, bundle: nil)
+    
     tableView.register(cellClass: TokenTableViewCell.self)
-    title = "ERC-20 Tokens"
+    title = NSLocalizedString("ERC-20 Tokens", comment: "")
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -46,6 +47,10 @@ class TokenTableViewController: UITableViewController {
     cell.configure(with: token, amount: amount, etherValue: etherValue)
     
     return cell
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
   }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -98,6 +98,7 @@ extension SendableRequest {
   
   func handleResult(data: Data?, response: URLResponse?, error: Error?,
                     callback: @escaping (Result<ParsedType>) -> Void) {
+    
     var err: Error?
     
     var obj: ParsedType?
@@ -111,7 +112,7 @@ extension SendableRequest {
       } else if let obj = obj {
         result = Result.success(obj)
       } else {
-        let error = RequestError(message: "Something went wrong")
+        let error = RequestError(message: NSLocalizedString("Something went wrong", comment: ""))
         result = Result.failure(error)
       }
       
@@ -119,13 +120,18 @@ extension SendableRequest {
     }
     
     
+    if let error = error {
+      err = error
+      return
+    }
+    
     guard let data = data else {
-      err = RequestError(message: "No data in response")
+      err = RequestError(message: NSLocalizedString("No data in response", comment: ""))
       return
     }
     
     guard let parsed = self.parse(data: data) else {
-      err = RequestError(message: "Could not parse result")
+      err = RequestError(message: NSLocalizedString("Could not parse result", comment: ""))
       return
     }
     

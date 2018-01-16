@@ -27,8 +27,14 @@ class MainScreenViewControllerSpec: QuickSpec {
         expect(controller.stack.superview) == controller.view
       }
       
-      it("should have only 1 subview") {
-        expect(controller.view.subviews.count) == 1
+      it("should have 3 subviews") {
+        expect(controller.view.subviews.count) == 3
+      }
+      
+      describe("the activity indicator") {
+        it("should have the correct superview") {
+          expect(controller.activityIndicator.superview) == controller.view
+        }
       }
       
       describe("the stack view") {
@@ -72,7 +78,7 @@ class MainScreenViewControllerSpec: QuickSpec {
       
       describe("the view more button") {
         it("should have the title of 'view more'") {
-          expect(controller.viewMoreButton.title(for: .normal)) == "view more"
+          expect(controller.viewMoreButton.title(for: .normal)) == "View More"
         }
       }
       
@@ -118,11 +124,11 @@ class MainScreenViewControllerSpec: QuickSpec {
           }
           
           it("should set the account balance correctly") {
-            expect(controller.accountBalanceView.balance) == "5.00000"
+            expect(controller.accountBalanceView.balance) == "5.00"
           }
           
           it("should set the token balance correctly") {
-            expect(controller.tokenBalanceView.balance) == "10.00000"
+            expect(controller.tokenBalanceView.balance) == "10.00"
           }
           
           it("should call the service") {

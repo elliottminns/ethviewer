@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum BalanceServiceError: Error {
+  case incompleteAccountBalance
+  case incompleteTokenBalance
+}
+
 struct BalanceService: Gettable {
   
   let address: String
@@ -24,6 +29,7 @@ struct BalanceService: Gettable {
   func get(callback: @escaping (Result<AccountBalance>) -> Void) {
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
     
+    var errors: [Error] = []
     var accountBalance: Double?
     var tokenBalances: [Token: Double] = [:]
     var rates: [Token: Double] = [:]
@@ -36,6 +42,8 @@ struct BalanceService: Gettable {
       group.leave()
       if case let .success(balance) = result {
         accountBalance = balance
+      } else if case let .failure(err) = result {
+        errors.append(err)
       }
     }
     
@@ -44,6 +52,8 @@ struct BalanceService: Gettable {
       TokenBalanceRequest(address: address, token: token).perform { result in
         if case let .success(balance) = result {
           tokenBalances[token] = balance
+        } else if case let .failure(err) = result {
+          errors.append(err)
         }
         group.leave()
       }
@@ -52,23 +62,38 @@ struct BalanceService: Gettable {
       EthConversionRequest(token: token).perform { result in
         if case let .success(rate) = result {
           rates[token] = rate
+        } else if case let .failure(err) = result {
+          errors.append(err)
         }
         group.leave()
       }
     }
     
     group.notify(queue: DispatchQueue.main) {
-      guard let account = accountBalance else {
-        let error = RequestError(message: "Could not load up the accounts")
+      guard errors.count == 0 else {
+        let error = errors[0]
         return callback(.failure(error))
       }
       
+      guard let account = accountBalance else {
+        let error = BalanceServiceError.incompleteAccountBalance
+        return callback(.failure(error))
+      }
+      
+      guard tokenBalances.count == self.tokens.count &&
+        rates.count == self.tokens.count else {
+          
+        let error = BalanceServiceError.incompleteTokenBalance
+        return callback(.failure(error))
+      }
+      
+      UIApplication.shared.isNetworkActivityIndicatorVisible = false
+      
       let balance = AccountBalance(address: self.address, account: account,
                                    tokens: tokenBalances, rates: rates)
-
-      UIApplication.shared.isNetworkActivityIndicatorVisible = false
       callback(.success(balance))
     }
+    
     group.leave()
   }
 }

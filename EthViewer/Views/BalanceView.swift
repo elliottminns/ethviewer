@@ -37,11 +37,15 @@ class BalanceView: UIView {
   func setupViews() {
     titleLabel.text = title
     
-    let titleFont = UIFont.systemFont(ofSize: 24)
+    let titleFont = UIFont.systemFont(ofSize: 24, weight: .semibold)
     let balanceFont = UIFont.systemFont(ofSize: 28)
     
     titleLabel.font = titleFont
     balanceLabel.font = balanceFont
+    
+    let grey = UIColor(white: 0.2, alpha: 1.0)
+    titleLabel.textColor = grey
+    balanceLabel.textColor = grey
     
     let stackView = UIStackView(arrangedSubviews: [titleLabel, balanceLabel])
     stackView.translatesAutoresizingMaskIntoConstraints = false

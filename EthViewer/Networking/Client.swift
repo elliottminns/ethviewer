@@ -21,8 +21,9 @@ class SessionClient: RequestClient {
   
   init() {
     let config = URLSessionConfiguration.default
-    config.timeoutIntervalForRequest = 15;
+    config.timeoutIntervalForRequest = 30;
     config.timeoutIntervalForResource = 30;
+    config.urlCache = URLCache.shared
     session = URLSession(configuration: config)
   }
   

@@ -12,6 +12,8 @@ class MainScreenViewController: UIViewController {
   
   let address: String = "0x082d3e0f04664b65127876e9A05e2183451c792a"
   
+  let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+  
   let accountBalanceView: BalanceView
   
   let tokenBalanceView: BalanceView
@@ -22,11 +24,23 @@ class MainScreenViewController: UIViewController {
   
   var refreshButton: UIBarButtonItem?
   
+  var activityItem = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+  
   let tokens = [Token.gnt, .omg, .rep]
+  
+  let retryButton = UIButton()
   
   var balance: AccountBalance? {
     didSet {
       guard let balance = balance else { return }
+      
+      if stack.alpha == 0.0 {
+        activityIndicator.stopAnimating()
+        UIView.animate(withDuration: 0.6, delay: 0.0, options: .curveEaseInOut, animations: {
+          self.stack.alpha = 1.0
+        }, completion: nil)
+      }
+      
       let fmt = { (balance: Double) -> String in
         return String(format: "%.2f", balance)
       }
@@ -45,6 +59,8 @@ class MainScreenViewController: UIViewController {
                                          target: self,
                                          action: #selector(refresh))
     navigationItem.rightBarButtonItem = refreshButton
+    stack.alpha = 0.0
+    activityIndicator.hidesWhenStopped = true
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -52,12 +68,33 @@ class MainScreenViewController: UIViewController {
   }
   
   func setupViews() {
+    view.addSubview(activityIndicator)
+    view.addSubview(stack)
+    view.addSubview(retryButton)
+    
+    activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+    activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    activityIndicator.startAnimating()
+    
     stack.translatesAutoresizingMaskIntoConstraints = false
     
     view.backgroundColor = UIColor.white
     
-    viewMoreButton.setTitle("view more", for:.normal)
-    viewMoreButton.setTitleColor(UIColor.blue, for: .normal)
+    retryButton.translatesAutoresizingMaskIntoConstraints = false
+    retryButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    retryButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    retryButton.setTitle(NSLocalizedString("Retry", comment: ""), for: .normal)
+    retryButton.titleLabel?.font = UIFont.systemFont(ofSize: 22)
+    retryButton.layer.borderWidth = 1.0
+    retryButton.layer.cornerRadius = 5
+    retryButton.addTarget(self, action: #selector(retry), for: .touchUpInside)
+    retryButton.isHidden = false
+    retryButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 44).isActive = true
+    retryButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 120).isActive = true
+    
+    viewMoreButton.setTitle(NSLocalizedString("View More", comment: ""), for: .normal)
+    viewMoreButton.titleLabel?.font = UIFont.systemFont(ofSize: 26, weight: .semibold)
     viewMoreButton.addTarget(self, action: #selector(viewMoreButtonPressed),
                              for: .touchUpInside)
     
@@ -65,8 +102,7 @@ class MainScreenViewController: UIViewController {
     stack.addArrangedSubview(tokenBalanceView)
     stack.addArrangedSubview(viewMoreButton)
 
-    view.addSubview(stack)
-    
+
     stack.axis = .vertical
     stack.alignment = .center
     stack.distribution = .fillEqually
@@ -79,6 +115,17 @@ class MainScreenViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    let buttonColor = navigationController?.navigationBar.tintColor
+    viewMoreButton.setTitleColor(buttonColor, for: .normal)
+    retryButton.setTitleColor(buttonColor, for: .normal)
+    retryButton.layer.borderColor = buttonColor?.cgColor
+    refresh()
+  }
+  
+  @objc
+  func retry() {
+    retryButton.isHidden = true
+    activityIndicator.startAnimating()
     refresh()
   }
   
@@ -89,6 +136,9 @@ class MainScreenViewController: UIViewController {
   }
   
   func updateBalances<T: Gettable>(with service: T) where T.ResultType == AccountBalance {
+    navigationItem.rightBarButtonItem = UIBarButtonItem(customView: activityItem)
+    activityItem.startAnimating()
+    
     refreshButton?.isEnabled = false
     viewMoreButton.isEnabled = false
     
@@ -98,12 +148,50 @@ class MainScreenViewController: UIViewController {
       case .success(let balance):
         self.balance = balance
         
-      case .failure(_): break
+      case .failure(let error):
+        self.showError(error: error)
       }
       
+      self.navigationItem.rightBarButtonItem = self.refreshButton
       self.refreshButton?.isEnabled = true
       self.viewMoreButton.isEnabled = true
     }
+  }
+  
+  func showError(error: Error) {
+    let title: String
+    let message: String
+    
+    activityIndicator.stopAnimating()
+    
+    if let serviceError = error as? BalanceServiceError {
+      title = NSLocalizedString("Network Error", comment: "")
+      switch serviceError {
+      case .incompleteAccountBalance:
+        message = NSLocalizedString("Could not obtain account balance, please try again.", comment: "")
+      case .incompleteTokenBalance:
+        message = NSLocalizedString("Could not obtain token balance, please try again.", comment: "")
+      }
+    } else {
+      title = NSLocalizedString("Something went wrong", comment: "")
+      message = error.localizedDescription
+    }
+    
+    showAlert(title: title, message: message)
+    
+    if balance == nil {
+      retryButton.isHidden = false
+    }
+  }
+  
+  func showAlert(title: String, message: String) {
+    let alert = UIAlertController(title: title, message: message,
+                                  preferredStyle: .alert)
+    
+    let closeAction = UIAlertAction(title: NSLocalizedString("Close", comment: ""),
+                                    style: .cancel, handler: nil)
+    alert.addAction(closeAction)
+    present(alert, animated: true, completion: nil)
   }
   
   @objc
