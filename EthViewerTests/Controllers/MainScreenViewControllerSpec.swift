@@ -37,6 +37,12 @@ class MainScreenViewControllerSpec: QuickSpec {
         }
       }
       
+      describe("the retry button") {
+        it("should be hidden initially") {
+          expect(controller.retryButton.isHidden) == true
+        }
+      }
+      
       describe("the stack view") {
         
         it("should have 3 arranged subviews in order") {

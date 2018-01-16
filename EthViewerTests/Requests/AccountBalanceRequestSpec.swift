@@ -20,7 +20,7 @@ class AccountBalanceRequestSpec: QuickSpec {
       }
       
       it("should have the correct baseUrl") {
-        expect(request.baseUrl?.absoluteString) == "http://api.etherscan.io"
+        expect(request.baseUrl?.absoluteString) == "https://api.etherscan.io"
       }
       
       describe("the build params") {

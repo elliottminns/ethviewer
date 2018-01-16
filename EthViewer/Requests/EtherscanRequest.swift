@@ -13,7 +13,7 @@ protocol EtherscanRequest: JSONResultParsing, JSONBuildableRequest, SendableRequ
 
 extension EtherscanRequest {
   var baseUrl: URL? {
-    return URL(string: "http://api.etherscan.io")
+    return URL(string: "https://api.etherscan.io")
   }
   
   var path: String {

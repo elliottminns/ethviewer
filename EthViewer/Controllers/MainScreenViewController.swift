@@ -89,7 +89,7 @@ class MainScreenViewController: UIViewController {
     retryButton.layer.borderWidth = 1.0
     retryButton.layer.cornerRadius = 5
     retryButton.addTarget(self, action: #selector(retry), for: .touchUpInside)
-    retryButton.isHidden = false
+    retryButton.isHidden = true
     retryButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 44).isActive = true
     retryButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 120).isActive = true
     
